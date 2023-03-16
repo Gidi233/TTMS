@@ -1,0 +1,124 @@
+# Project: 项目1
+# Makefile created by Dev-C++ 5.6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = 软工2004第五组TTMMS源码/View/Account_UI.o 软工2004第五组TTMMS源码/View/Main_Menu.o 软工2004第五组TTMMS源码/View/Play_UI.o 软工2004第五组TTMMS源码/View/Queries_Menu.o 软工2004第五组TTMMS源码/View/Query_Play_UI.o 软工2004第五组TTMMS源码/View/Sale_UI.o 软工2004第五组TTMMS源码/View/SalesAnalysis_UI.o 软工2004第五组TTMMS源码/View/Schedule_UI.o 软工2004第五组TTMMS源码/View/Seat_UI.o 软工2004第五组TTMMS源码/View/Studio_UI.o 软工2004第五组TTMMS源码/View/Ticket_UI.o 软工2004第五组TTMMS源码/Service/Account.o 软工2004第五组TTMMS源码/Service/EntityKey.o 软工2004第五组TTMMS源码/Service/Play.o 软工2004第五组TTMMS源码/Service/Sale.o 软工2004第五组TTMMS源码/Service/SalesAnalysis.o 软工2004第五组TTMMS源码/Service/Schedule.o 软工2004第五组TTMMS源码/Service/Seat.o 软工2004第五组TTMMS源码/Service/Studio.o 软工2004第五组TTMMS源码/Service/Ticket.o 软工2004第五组TTMMS源码/Persistence/Account_Persist.o 软工2004第五组TTMMS源码/Persistence/EntityKey_Persist.o 软工2004第五组TTMMS源码/Persistence/Play_Persist.o 软工2004第五组TTMMS源码/Persistence/Query_Persist.o 软工2004第五组TTMMS源码/Persistence/Sale_Persist.o 软工2004第五组TTMMS源码/Persistence/SalesAnalysis_Persist.o 软工2004第五组TTMMS源码/Persistence/Schedule_Persist.o 软工2004第五组TTMMS源码/Persistence/Seat_Persist.o 软工2004第五组TTMMS源码/Persistence/Studio_Persist.o 软工2004第五组TTMMS源码/Persistence/Ticket_Persist.o 软工2004第五组TTMMS源码/Common/common.o 软工2004第五组TTMMS源码/Common/listTestDrv.o 软工2004第五组TTMMS源码/TTMS.o
+LINKOBJ  = 软工2004第五组TTMMS源码/View/Account_UI.o 软工2004第五组TTMMS源码/View/Main_Menu.o 软工2004第五组TTMMS源码/View/Play_UI.o 软工2004第五组TTMMS源码/View/Queries_Menu.o 软工2004第五组TTMMS源码/View/Query_Play_UI.o 软工2004第五组TTMMS源码/View/Sale_UI.o 软工2004第五组TTMMS源码/View/SalesAnalysis_UI.o 软工2004第五组TTMMS源码/View/Schedule_UI.o 软工2004第五组TTMMS源码/View/Seat_UI.o 软工2004第五组TTMMS源码/View/Studio_UI.o 软工2004第五组TTMMS源码/View/Ticket_UI.o 软工2004第五组TTMMS源码/Service/Account.o 软工2004第五组TTMMS源码/Service/EntityKey.o 软工2004第五组TTMMS源码/Service/Play.o 软工2004第五组TTMMS源码/Service/Sale.o 软工2004第五组TTMMS源码/Service/SalesAnalysis.o 软工2004第五组TTMMS源码/Service/Schedule.o 软工2004第五组TTMMS源码/Service/Seat.o 软工2004第五组TTMMS源码/Service/Studio.o 软工2004第五组TTMMS源码/Service/Ticket.o 软工2004第五组TTMMS源码/Persistence/Account_Persist.o 软工2004第五组TTMMS源码/Persistence/EntityKey_Persist.o 软工2004第五组TTMMS源码/Persistence/Play_Persist.o 软工2004第五组TTMMS源码/Persistence/Query_Persist.o 软工2004第五组TTMMS源码/Persistence/Sale_Persist.o 软工2004第五组TTMMS源码/Persistence/SalesAnalysis_Persist.o 软工2004第五组TTMMS源码/Persistence/Schedule_Persist.o 软工2004第五组TTMMS源码/Persistence/Seat_Persist.o 软工2004第五组TTMMS源码/Persistence/Studio_Persist.o 软工2004第五组TTMMS源码/Persistence/Ticket_Persist.o 软工2004第五组TTMMS源码/Common/common.o 软工2004第五组TTMMS源码/Common/listTestDrv.o 软工2004第五组TTMMS源码/TTMS.o
+LIBS     = -L"D:/Dev-Cpp/Dev-Cpp/MinGW64/lib" -L"D:/Dev-Cpp/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Dev-Cpp/Dev-Cpp/MinGW64/include" -I"D:/Dev-Cpp/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
+CXXINCS  = -I"D:/Dev-Cpp/Dev-Cpp/MinGW64/include" -I"D:/Dev-Cpp/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"D:/Dev-Cpp/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
+BIN      = 项目1.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+软工2004第五组TTMMS源码/View/Account_UI.o: 软工2004第五组TTMMS源码/View/Account_UI.c
+	$(CC) -c 软工2004第五组TTMMS源码/View/Account_UI.c -o 软工2004第五组TTMMS源码/View/Account_UI.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/View/Main_Menu.o: 软工2004第五组TTMMS源码/View/Main_Menu.c
+	$(CC) -c 软工2004第五组TTMMS源码/View/Main_Menu.c -o 软工2004第五组TTMMS源码/View/Main_Menu.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/View/Play_UI.o: 软工2004第五组TTMMS源码/View/Play_UI.c
+	$(CC) -c 软工2004第五组TTMMS源码/View/Play_UI.c -o 软工2004第五组TTMMS源码/View/Play_UI.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/View/Queries_Menu.o: 软工2004第五组TTMMS源码/View/Queries_Menu.c
+	$(CC) -c 软工2004第五组TTMMS源码/View/Queries_Menu.c -o 软工2004第五组TTMMS源码/View/Queries_Menu.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/View/Query_Play_UI.o: 软工2004第五组TTMMS源码/View/Query_Play_UI.c
+	$(CC) -c 软工2004第五组TTMMS源码/View/Query_Play_UI.c -o 软工2004第五组TTMMS源码/View/Query_Play_UI.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/View/Sale_UI.o: 软工2004第五组TTMMS源码/View/Sale_UI.c
+	$(CC) -c 软工2004第五组TTMMS源码/View/Sale_UI.c -o 软工2004第五组TTMMS源码/View/Sale_UI.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/View/SalesAnalysis_UI.o: 软工2004第五组TTMMS源码/View/SalesAnalysis_UI.c
+	$(CC) -c 软工2004第五组TTMMS源码/View/SalesAnalysis_UI.c -o 软工2004第五组TTMMS源码/View/SalesAnalysis_UI.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/View/Schedule_UI.o: 软工2004第五组TTMMS源码/View/Schedule_UI.c
+	$(CC) -c 软工2004第五组TTMMS源码/View/Schedule_UI.c -o 软工2004第五组TTMMS源码/View/Schedule_UI.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/View/Seat_UI.o: 软工2004第五组TTMMS源码/View/Seat_UI.c
+	$(CC) -c 软工2004第五组TTMMS源码/View/Seat_UI.c -o 软工2004第五组TTMMS源码/View/Seat_UI.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/View/Studio_UI.o: 软工2004第五组TTMMS源码/View/Studio_UI.c
+	$(CC) -c 软工2004第五组TTMMS源码/View/Studio_UI.c -o 软工2004第五组TTMMS源码/View/Studio_UI.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/View/Ticket_UI.o: 软工2004第五组TTMMS源码/View/Ticket_UI.c
+	$(CC) -c 软工2004第五组TTMMS源码/View/Ticket_UI.c -o 软工2004第五组TTMMS源码/View/Ticket_UI.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Service/Account.o: 软工2004第五组TTMMS源码/Service/Account.c
+	$(CC) -c 软工2004第五组TTMMS源码/Service/Account.c -o 软工2004第五组TTMMS源码/Service/Account.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Service/EntityKey.o: 软工2004第五组TTMMS源码/Service/EntityKey.c
+	$(CC) -c 软工2004第五组TTMMS源码/Service/EntityKey.c -o 软工2004第五组TTMMS源码/Service/EntityKey.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Service/Play.o: 软工2004第五组TTMMS源码/Service/Play.c
+	$(CC) -c 软工2004第五组TTMMS源码/Service/Play.c -o 软工2004第五组TTMMS源码/Service/Play.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Service/Sale.o: 软工2004第五组TTMMS源码/Service/Sale.c
+	$(CC) -c 软工2004第五组TTMMS源码/Service/Sale.c -o 软工2004第五组TTMMS源码/Service/Sale.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Service/SalesAnalysis.o: 软工2004第五组TTMMS源码/Service/SalesAnalysis.c
+	$(CC) -c 软工2004第五组TTMMS源码/Service/SalesAnalysis.c -o 软工2004第五组TTMMS源码/Service/SalesAnalysis.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Service/Schedule.o: 软工2004第五组TTMMS源码/Service/Schedule.c
+	$(CC) -c 软工2004第五组TTMMS源码/Service/Schedule.c -o 软工2004第五组TTMMS源码/Service/Schedule.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Service/Seat.o: 软工2004第五组TTMMS源码/Service/Seat.c
+	$(CC) -c 软工2004第五组TTMMS源码/Service/Seat.c -o 软工2004第五组TTMMS源码/Service/Seat.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Service/Studio.o: 软工2004第五组TTMMS源码/Service/Studio.c
+	$(CC) -c 软工2004第五组TTMMS源码/Service/Studio.c -o 软工2004第五组TTMMS源码/Service/Studio.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Service/Ticket.o: 软工2004第五组TTMMS源码/Service/Ticket.c
+	$(CC) -c 软工2004第五组TTMMS源码/Service/Ticket.c -o 软工2004第五组TTMMS源码/Service/Ticket.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Persistence/Account_Persist.o: 软工2004第五组TTMMS源码/Persistence/Account_Persist.c
+	$(CC) -c 软工2004第五组TTMMS源码/Persistence/Account_Persist.c -o 软工2004第五组TTMMS源码/Persistence/Account_Persist.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Persistence/EntityKey_Persist.o: 软工2004第五组TTMMS源码/Persistence/EntityKey_Persist.c
+	$(CC) -c 软工2004第五组TTMMS源码/Persistence/EntityKey_Persist.c -o 软工2004第五组TTMMS源码/Persistence/EntityKey_Persist.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Persistence/Play_Persist.o: 软工2004第五组TTMMS源码/Persistence/Play_Persist.c
+	$(CC) -c 软工2004第五组TTMMS源码/Persistence/Play_Persist.c -o 软工2004第五组TTMMS源码/Persistence/Play_Persist.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Persistence/Query_Persist.o: 软工2004第五组TTMMS源码/Persistence/Query_Persist.c
+	$(CC) -c 软工2004第五组TTMMS源码/Persistence/Query_Persist.c -o 软工2004第五组TTMMS源码/Persistence/Query_Persist.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Persistence/Sale_Persist.o: 软工2004第五组TTMMS源码/Persistence/Sale_Persist.c
+	$(CC) -c 软工2004第五组TTMMS源码/Persistence/Sale_Persist.c -o 软工2004第五组TTMMS源码/Persistence/Sale_Persist.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Persistence/SalesAnalysis_Persist.o: 软工2004第五组TTMMS源码/Persistence/SalesAnalysis_Persist.c
+	$(CC) -c 软工2004第五组TTMMS源码/Persistence/SalesAnalysis_Persist.c -o 软工2004第五组TTMMS源码/Persistence/SalesAnalysis_Persist.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Persistence/Schedule_Persist.o: 软工2004第五组TTMMS源码/Persistence/Schedule_Persist.c
+	$(CC) -c 软工2004第五组TTMMS源码/Persistence/Schedule_Persist.c -o 软工2004第五组TTMMS源码/Persistence/Schedule_Persist.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Persistence/Seat_Persist.o: 软工2004第五组TTMMS源码/Persistence/Seat_Persist.c
+	$(CC) -c 软工2004第五组TTMMS源码/Persistence/Seat_Persist.c -o 软工2004第五组TTMMS源码/Persistence/Seat_Persist.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Persistence/Studio_Persist.o: 软工2004第五组TTMMS源码/Persistence/Studio_Persist.c
+	$(CC) -c 软工2004第五组TTMMS源码/Persistence/Studio_Persist.c -o 软工2004第五组TTMMS源码/Persistence/Studio_Persist.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Persistence/Ticket_Persist.o: 软工2004第五组TTMMS源码/Persistence/Ticket_Persist.c
+	$(CC) -c 软工2004第五组TTMMS源码/Persistence/Ticket_Persist.c -o 软工2004第五组TTMMS源码/Persistence/Ticket_Persist.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Common/common.o: 软工2004第五组TTMMS源码/Common/common.c
+	$(CC) -c 软工2004第五组TTMMS源码/Common/common.c -o 软工2004第五组TTMMS源码/Common/common.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/Common/listTestDrv.o: 软工2004第五组TTMMS源码/Common/listTestDrv.c
+	$(CC) -c 软工2004第五组TTMMS源码/Common/listTestDrv.c -o 软工2004第五组TTMMS源码/Common/listTestDrv.o $(CFLAGS)
+
+软工2004第五组TTMMS源码/TTMS.o: 软工2004第五组TTMMS源码/TTMS.c
+	$(CC) -c 软工2004第五组TTMMS源码/TTMS.c -o 软工2004第五组TTMMS源码/TTMS.o $(CFLAGS)
